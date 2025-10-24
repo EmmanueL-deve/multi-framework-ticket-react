@@ -1,0 +1,37 @@
+:root{
+  --container-max: 1440px;
+  --color-open: #10B981;
+  --color-progress: #F59E0B;
+  --color-closed: #6B7280;
+  --accent: #2563eb;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a;}
+.container{max-width:var(--container-max); margin:0 auto; padding:1rem;}
+.header, .footer{background:transparent;}
+.header-inner, .footer-inner{max-width:var(--container-max); margin:0 auto; padding:1rem; display:flex; align-items:center; justify-content:space-between;}
+.hero{position:relative; background:linear-gradient(135deg,#FF6B6B,#FFD166); color:white; padding:3rem; border-radius:12px; overflow:hidden;}
+.hero .decor-circle{position:absolute; border-radius:50%; width:120px; height:120px; opacity:0.9; transform:translate(-20%, -30%);}
+.hero .circle-1{background:linear-gradient(135deg,#7C3AED,#06B6D4); left:-40px; top:-40px;}
+.hero .circle-2{background:linear-gradient(135deg,#F97316,#F43F5E); right:-40px; top:20px; transform:translate(20%, -10%);}
+.hero h1{font-size:2rem; margin:0;}
+.hero p{opacity:0.95}
+.hero .wave{position:absolute; left:0; right:0; bottom:0; height:120px}
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem}
+.card{background:var(--card-bg); padding:1rem; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.08)}
+.status-tag{padding:0.25rem .5rem; border-radius:999px; color:white; font-weight:700; font-size:0.75rem}
+.status-open{background:var(--color-open)}
+.status-in_progress{background:var(--color-progress)}
+.status-closed{background:var(--color-closed)}
+
+.form-group{display:flex; flex-direction:column; gap:0.25rem; margin-bottom:0.5rem}
+input, select, textarea{padding:0.6rem; border-radius:8px; border:1px solid #e6e8eb}
+button{background:var(--accent); color:white; padding:0.6rem 1rem; border-radius:8px; border:none; cursor:pointer}
+button.secondary{background:transparent; color:var(--accent); border:1px solid rgba(37,99,235,0.12)}
+
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+a{color:inherit; text-decoration:none}
+[role='alert']{border-left:4px solid #f43f5e; padding:0.5rem; background:#fff3f2}
+.focus-outline:focus{outline:3px solid rgba(37,99,235,0.25)}
